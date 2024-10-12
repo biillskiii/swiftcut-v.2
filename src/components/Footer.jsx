@@ -6,12 +6,12 @@ const Footer = () => {
       <div className="border-t border-black py-6">
         <div className="text-center">
           {/* Logo and Name */}
-          <div className="flex justify-center items-center mb-2">
+          <div className="flex justify-center items-center mb-5 lg:mb-2">
             {/* Replace with your logo image or SVG */}
             <img
               src="src/assets/logo-raky.png"
               alt="Rakyfactory Logo"
-              className="w-[262.56px]"
+              className="lg:w-[262.56px] w-[150px]"
             />
           </div>
 

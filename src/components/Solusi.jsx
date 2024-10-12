@@ -5,8 +5,8 @@ const Solusi = () => {
   return (
     <div className="font-sans px-[59px] mx-auto p-6 bg-white">
       <div className="mb-6 text-center">
-        <span className=" font-semibold text-xl">BENEFIT</span>
-        <h1 className="text-5xl mb-[43px] font-bold mt-[19px] leading-normal">
+        <span className=" font-semibold text-base lg:text-xl">BENEFIT</span>
+        <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal">
           Solusi Praktis untuk Konten Short-video
         </h1>
       </div>
@@ -55,9 +55,9 @@ const BenefitCard = ({ icon, title, description }) => {
       <div className="flex-shrink-0  mb-[40px] rounded-full flex items-center justify-center mr-4">
         {icon}
       </div>
-      <div className="px-[54.5px]">
-        <h3 className="font-semibold text-[26px] mb-1">{title}</h3>
-        <p className="text-gray-600 text-xl leading-subheading">
+      <div className="px-8 lg:px-[54.5px]">
+        <h3 className="font-semibold text-xl lg:text-[26px] mb-1">{title}</h3>
+        <p className="text-gray-600 text-base lg:text-xl leading-subheading">
           {description}
         </p>
       </div>

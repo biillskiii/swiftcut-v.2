@@ -10,13 +10,13 @@ const Testi = () => {
   };
 
   return (
-    <div className="px-[59px] mx-auto p-6 bg-white">
+    <div className="px-[59px] mx-auto bg-white">
       {/* Testimonial & FAQ Header */}
       <div className="text-center mb-4">
-        <span className="text-xl uppercase tracking-wide">
+        <span className=" text-base lg:text-xl uppercase tracking-wide">
           TESTIMONIAL & FAQ
         </span>
-        <h1 className="text-5xl leading-normal mb-[43px] font-bold mt-[19px]">
+        <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal">
           Jaminan Hasil yang Selalu <br />
           Konsisten & <span className="text-primary">Tepat Waktu</span>
         </h1>
@@ -24,7 +24,7 @@ const Testi = () => {
 
       {/* Testimonial Section */}
       <div
-        className="h-auto flex flex-col gap-y-[125px] p-4 bg-cover"
+        className="lg:block hidden h-auto  flex-col gap-y-[125px] p-4 bg-cover"
         style={{ backgroundImage: `url("src/assets/bg-testi.png")` }}
       >
         <p className="text-[26px] font-bold mb-2">
@@ -57,7 +57,7 @@ const Testi = () => {
           onClick={() => toggleFAQ(0)}
         >
           <div className="flex justify-between items-center">
-            <p className="font-semibold text-xl">
+            <p className="font-semibold text-base lg:text-xl">
               Bagaimana Layanan Ini Membantu Saya?
             </p>
             <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
@@ -90,7 +90,7 @@ const Testi = () => {
           onClick={() => toggleFAQ(1)}
         >
           <div className="flex justify-between items-center">
-            <p className="font-semibold text-xl">
+            <p className="font-semibold text-base lg:text-xl">
               Bagaimana Cara Kerja Kredit Subscription?
             </p>
             <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
@@ -115,7 +115,7 @@ const Testi = () => {
           onClick={() => toggleFAQ(2)}
         >
           <div className="flex justify-between items-center">
-            <p className="font-semibold text-xl">
+            <p className="font-semibold text-base lg:text-xl">
               Bagaimana Cara Subscribe Layanan Ini?
             </p>
             <span>{activeIndex === 2 ? <ArrowUp2 /> : <ArrowDown2 />}</span>

@@ -3,13 +3,13 @@ import React from 'react';
 const Form = () => {
   return (
     <div className="px-[59px] mx-auto bg-white text-center">
-      <h2 className="text-xl font-bold text-primary uppercase mb-2">
+      <h2 className="text-base lg:text-xl font-bold text-primary uppercase mb-2">
         Get Started - Free Trial
       </h2>
-      <h1 className="text-5xl leading-normal font-bold mb-4">
+      <h1 className="text-2xl lg:text-5xl mb-5 font-bold mt-[19px] lg:leading-normal">
         Coba Layanan <span className="text-primary">Edit Video Unlimited</span>, Sekarang Juga!
       </h1>
-      <p className="text-xl leading-subheading mb-6">
+      <p className="text-sm lg:text-xl leading-subheading mb-6">
         Dapatkan 1 project manager dan 2-3 editor yang pasti cocok dengan preferensi Anda, atau coba trial untuk memastikan kecocokannya!
       </p>
       

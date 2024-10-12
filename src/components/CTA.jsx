@@ -6,11 +6,11 @@ const CTA = () => {
       <div>
         <Bookmark2 size={90} color="#7a5ae1" />
       </div>
-      <h1 className="leading-normal font-bold text-5xl">
+      <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal">
         Setiap <span className="text-primary">Style Editing</span>, Setiap
         Preferensi, Kami <span className="text-primary">Siap Layani!</span>
       </h1>
-      <p className="leading-subheading text-xl">
+      <p className="leading-subheading text-base lg:text-xl">
         Kami akan mengklasifikasikan tingkat kompleksitas editing Anda ke 3
         level, lalu kami pilihkan 2-3 editor yang paling cocok dengan preferensi
         Anda. Ingin coba memastikan kecocokannya?

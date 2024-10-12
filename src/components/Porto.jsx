@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { ArrowRight2, ArrowLeft2 } from "iconsax-react";
+import lowVideo from "../assets/video/LOW - STOCKWISE.mp4";
+import midGraciaVideo from "../assets/video/MID - GRACIA.mp4";
+import midRaymondVideo from "../assets/video/MID - RAYMOND.mp4";
+import highVideo from "../assets/video/HIGH - STOCKWISE.mp4";
 
 const videos = [
-  { src: "src/assets/video/LOW - STOCKWISE.mp4", label: "LOW" },
-  { src: "src/assets/video/MID - GRACIA.mp4", label: "MID" },
-  { src: "src/assets/video/MID - RAYMOND.mp4", label: "MID" },
-  { src: "src/assets/video/HIGH - STOCKWISE.mp4", label: "HIGH" },
+  { src: lowVideo, label: "LOW" },
+  { src: midGraciaVideo, label: "MID" },
+  { src: midRaymondVideo, label: "MID" },
+  { src: highVideo, label: "HIGH" },
 ];
 
 const Porto = () => {
@@ -26,15 +30,14 @@ const Porto = () => {
   return (
     <div className="font-sans px-[59px] mx-auto p-6 bg-white">
       <div className="mb-4 text-center">
-        <span className="font-medium text-xl uppercase tracking-wide">PORTFOLIO</span>
-        <h1 className="text-5xl font-bold leading-normal mt-[19px] mb-[59px]">
+        <span className="font-semibold text-base lg:text-xl">PORTFOLIO</span>
+        <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal ">
           Telah dipercaya <span className="text-primary">Creator</span> <br />
           dan <span className="text-primary">Bisnis</span> Ternama
         </h1>
       </div>
 
       <div className="relative overflow-hidden">
-        {/* Container for videos in a carousel row */}
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{
@@ -53,7 +56,6 @@ const Porto = () => {
                 <source src={video.src} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              {/* Label */}
               <div className="absolute top-3 right-5 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
                 {video.label}
               </div>
@@ -75,7 +77,6 @@ const Porto = () => {
         </button>
       </div>
 
-      {/* Slide dots */}
       <div className="flex justify-center space-x-2 mt-4">
         {videos.map((_, index) => (
           <div

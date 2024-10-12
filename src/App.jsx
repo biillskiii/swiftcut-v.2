@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="space-y-[200px] mb-10">
+      <div className="space-y-[200px] mx-auto w-full mb-10">
         <Hero />
         <Solusi />
         <Porto />
