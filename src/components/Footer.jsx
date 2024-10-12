@@ -1,5 +1,5 @@
 import React from "react";
-
+import Logo from "../assets/logo-raky.png";
 const Footer = () => {
   return (
     <div className="px-[59px] ">
@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex justify-center items-center mb-5 lg:mb-2">
             {/* Replace with your logo image or SVG */}
             <img
-              src="src/assets/logo-raky.png"
+              src={Logo}
               alt="Rakyfactory Logo"
               className="lg:w-[262.56px] w-[150px]"
             />
