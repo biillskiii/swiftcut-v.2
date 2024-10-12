@@ -38,6 +38,7 @@ const Porto = () => {
       </div>
 
       <div className="relative overflow-hidden">
+        {/* Container for videos in a carousel row */}
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{
@@ -52,10 +53,12 @@ const Porto = () => {
                 loop
                 muted
                 playsInline
+                onCanPlay={(e) => e.target.play()} // Memastikan video diputar ketika siap
               >
                 <source src={video.src} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              {/* Label */}
               <div className="absolute top-3 right-5 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
                 {video.label}
               </div>
@@ -77,6 +80,7 @@ const Porto = () => {
         </button>
       </div>
 
+      {/* Slide dots */}
       <div className="flex justify-center space-x-2 mt-4">
         {videos.map((_, index) => (
           <div
