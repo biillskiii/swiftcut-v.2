@@ -19,7 +19,7 @@ const Price = () => {
         </div>
         <div className="mb-2 mt-[39px]">
           <p className="text-sm lg:text-xl font-bold uppercase">
-            Paket kredit 360 jam ≈ 15 hari
+            Paket kredit 360 jam
           </p>
 
           <p className="text-3xl lg:text-[64px] font-black mt-2">Rp2.199.000</p>
@@ -69,7 +69,7 @@ const Price = () => {
         </div>
         <div className="mb-2 mt-[39px]">
           <p className="text-sm lg:text-xl font-bold">
-            PAKET KREDIT 744 JAM ≈ 31 HARI
+            PAKET KREDIT 744 JAM
           </p>
           <p className="line-through my-[5px] italic text-red-500 text-xl lg:text-2xl">
             Rp4.398.000
@@ -121,7 +121,7 @@ const Price = () => {
         </div>
         <div className="mb-2 mt-[39px]">
           <p className=" text-sm lg:text-xl font-bold">
-            PAKET KREDIT 744 JAM ≈ 31 HARI
+            PAKET KREDIT 744 JAM
           </p>
           <p className="line-through italic my-[5px] text-red-500 lg:text-2xl text-xl ">
             Rp6.398.000
