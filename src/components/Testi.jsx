@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Instagram } from "iconsax-react";
 import { FaCircleCheck } from "react-icons/fa6";
 import { ArrowDown2, ArrowUp2 } from "iconsax-react";
+import Review from "../assets/review.png"
 const Testi = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -10,7 +11,7 @@ const Testi = () => {
   };
 
   return (
-    <div className="px-[59px] mx-auto bg-white">
+    <div className="lg:px-[59px] px-[30px] mx-auto bg-white">
       {/* Testimonial & FAQ Header */}
       <div className="text-center mb-4">
         <span className=" text-base lg:text-xl uppercase tracking-wide">
@@ -23,33 +24,9 @@ const Testi = () => {
       </div>
 
       {/* Testimonial Section */}
-      <div
-        className="lg:block hidden h-auto  flex-col gap-y-[125px] p-4 bg-cover"
-        style={{ backgroundImage: `url("src/assets/bg-testi.png")` }}
-      >
-        <p className="text-[26px] font-bold mb-2">
-          “Editingnya gacor! Seneng banget selalu gercep dan tepat waktu.”
-        </p>
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="flex items-center gap-x-3 font-bold text-[26px]">
-              <span className="">@alvisyhrn</span>
-              <FaCircleCheck className="text-blue-500 text-lg" />
-            </p>
-            <p className="text-base text-gray-500">
-              Penulis buku & Content Creator
-            </p>
-          </div>
-          <div className="text-right">
-            <p className="font-bold text-4xl">830k</p>
-            <p className=" flex items-center font-semibold gap-x-2">
-              <Instagram />
-              Followers
-            </p>
-          </div>
-        </div>
+      <div>
+        <img src={Review} alt="" />
       </div>
-
       {/* FAQ Section */}
       <div className="space-y-4 mt-10">
         <div
@@ -57,7 +34,7 @@ const Testi = () => {
           onClick={() => toggleFAQ(0)}
         >
           <div className="flex justify-between items-center">
-            <p className="font-semibold text-base lg:text-xl">
+            <p className="font-semibold text-xs lg:text-xl">
               Bagaimana Layanan Ini Membantu Saya?
             </p>
             <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
@@ -90,7 +67,7 @@ const Testi = () => {
           onClick={() => toggleFAQ(1)}
         >
           <div className="flex justify-between items-center">
-            <p className="font-semibold text-base lg:text-xl">
+            <p className="font-semibold text-xs lg:text-xl">
               Bagaimana Cara Kerja Kredit Subscription?
             </p>
             <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
@@ -115,7 +92,7 @@ const Testi = () => {
           onClick={() => toggleFAQ(2)}
         >
           <div className="flex justify-between items-center">
-            <p className="font-semibold text-base lg:text-xl">
+            <p className="font-semibold text-xs lg:text-xl">
               Bagaimana Cara Subscribe Layanan Ini?
             </p>
             <span>{activeIndex === 2 ? <ArrowUp2 /> : <ArrowDown2 />}</span>

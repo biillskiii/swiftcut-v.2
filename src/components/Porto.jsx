@@ -28,7 +28,7 @@ const Porto = () => {
   }, []);
 
   return (
-    <div className="font-sans px-[59px] mx-auto p-6 bg-white">
+    <div className="font-sans lg:px-[59px] px-[30px] mx-auto p-6 bg-white">
       <div className="mb-4 text-center">
         <span className="font-semibold text-base lg:text-xl">PORTFOLIO</span>
         <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal ">
@@ -48,7 +48,7 @@ const Porto = () => {
           {videos.map((video, index) => (
             <div key={index} className="min-w-full space-x-5 relative">
               <video
-                className="w-full rounded-[30px] h-full object-cover"
+                className="w-full h-full object-cover"
                 autoPlay
                 loop
                 muted

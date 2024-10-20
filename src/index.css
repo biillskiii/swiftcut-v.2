@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Menyembunyikan konten di layar lebih besar dari 700px */
+@media (min-width: 700px) {
+    .hide-on-large {
+        display: none;
+    }
+}
+
+/* Menampilkan pesan di layar lebih besar dari 700px */
+@media (max-width: 700px) {
+    .desktop-message {
+        display: none;
+    }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../assets/logo-raky.png";
 const Footer = () => {
   return (
-    <div className="px-[59px] ">
+    <div className="lg:px-[59px] px-[30px] ">
       <div className="border-t border-black py-6">
         <div className="text-center">
           {/* Logo and Name */}
@@ -16,12 +16,12 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <p className="text-gray-600 text-sm">
+          <p className=" text-xs lg:text-sm">
             +62 851-7530-6644 | hi.rakyfactory@gmail.com
           </p>
 
           {/* Copyright Information */}
-          <p className="text-gray-500 text-xs mt-2">
+          <p className="text-[10px] lg:text-xs mt-1"> 
             Copyright © 2024 PT Rakyfactory Digital Group. All Right Reserved.
           </p>
         </div>
