@@ -68,9 +68,7 @@ const Price = () => {
           </span>
         </div>
         <div className="mb-2 mt-[39px]">
-          <p className="text-sm lg:text-xl font-bold">
-            PAKET KREDIT 744 JAM
-          </p>
+          <p className="text-sm lg:text-xl font-bold">PAKET KREDIT 744 JAM</p>
           <p className="line-through my-[5px] italic text-red-500 text-xl lg:text-2xl">
             Rp4.398.000
           </p>
@@ -120,9 +118,7 @@ const Price = () => {
           </span>
         </div>
         <div className="mb-2 mt-[39px]">
-          <p className=" text-sm lg:text-xl font-bold">
-            PAKET KREDIT 744 JAM
-          </p>
+          <p className=" text-sm lg:text-xl font-bold uppercase">Paket kredit 1488 jam</p>
           <p className="line-through italic my-[5px] text-red-500 lg:text-2xl text-xl ">
             Rp6.398.000
           </p>
