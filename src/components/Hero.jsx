@@ -3,10 +3,10 @@ import Hero from "../assets/hero.png";
 
 function App() {
   const handleDashboard = () => {
-    window.location.href = "https://dashboard-topaz-kappa.vercel.app/";
+    window.location.href = "https://app.rakyfactory.com/";
   };
   return (
-    <div className="bg-white lg:px-[59px] px-[30px] text-center min-h-screen ">
+    <div className="bg-white lg:px-[59px] px-[10px] text-center min-h-screen ">
       {/* Mobile View */}
       <div className="block lg:hidden">
         <h2 className="lg:text-5xl text-3xl lg:mt-[86px] mt-[50px] font-bold lg:leading-normal mb-4">
@@ -18,7 +18,15 @@ function App() {
           100+ editor kami siap hasilkan video sesuai preferensi Anda, konsisten
           selama kredit subscription tersedia.
         </p>
-        <img src={Hero} alt="Dashboard Trello" className="mx-auto mb-6" />
+        <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            className="w-full aspect-video"
+            src="https://www.youtube.com/embed/wAFAEXmT9zQ"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
         <div className="px-[55px]">
           <button
             onClick={handleDashboard}
