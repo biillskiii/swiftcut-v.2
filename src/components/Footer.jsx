@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../assets/logo-raky.png";
 const Footer = () => {
   return (
-    <div className="lg:px-[59px] px-[30px] ">
+    <div className="lg:px-[59px] px-[10px] ">
       <div className="border-t border-black py-6">
         <div className="text-center">
           {/* Logo and Name */}

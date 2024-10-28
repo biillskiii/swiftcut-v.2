@@ -3,7 +3,7 @@ import { Unlimited, People, Flashy, Timer, Card, Box } from "iconsax-react";
 
 const Solusi = () => {
   return (
-    <div className="font-sans lg:px-[59px] px-[30px] mx-auto p-6 bg-white">
+    <div className="font-sans lg:px-[59px] px-[10px] mx-auto p-6 bg-white">
       <div className="mb-6 text-center">
         <span className=" font-semibold text-base lg:text-xl">BENEFIT</span>
         <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal">

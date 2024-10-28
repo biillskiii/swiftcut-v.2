@@ -3,10 +3,10 @@ import { FaCircleCheck } from "react-icons/fa6";
 
 const Price = () => {
   const handleDashboard = () => {
-    window.location.href = "https://dashboard-topaz-kappa.vercel.app/";
+    window.location.href = "https://app.rakyfactory.com/";
   };
   return (
-    <div className="lg:px-[59px] px-[28px] space-y-[50px]">
+    <div className="lg:px-[59px] px-[10px] space-y-[50px]">
       {/* Price Starter */}
       <div className=" border-2 border-black rounded-[30px] p-6">
         <div className="flex justify-between pb-4 border-b-2 border-black items-center mb-4">
@@ -118,7 +118,9 @@ const Price = () => {
           </span>
         </div>
         <div className="mb-2 mt-[39px]">
-          <p className=" text-sm lg:text-xl font-bold uppercase">Paket kredit 1488 jam</p>
+          <p className=" text-sm lg:text-xl font-bold uppercase">
+            Paket kredit 1488 jam
+          </p>
           <p className="line-through italic my-[5px] text-red-500 lg:text-2xl text-xl ">
             Rp6.398.000
           </p>

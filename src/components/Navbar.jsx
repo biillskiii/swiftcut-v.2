@@ -4,7 +4,7 @@ import { ArrowRight } from "iconsax-react";
 
 const Navbar = () => {
   const handleDashboard = () => {
-    window.location.href = "https://dashboard-topaz-kappa.vercel.app/";
+    window.location.href = "https://app.rakyfactory.com/";
   };
   return (
     <nav className="flex items-center lg:justify-center justify-between lg:px-[59px] px-[30px] py-5 bg-white shadow-md">

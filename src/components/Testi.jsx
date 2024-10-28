@@ -11,7 +11,7 @@ const Testi = () => {
   };
 
   return (
-    <div className="lg:px-[59px] px-[30px] mx-auto bg-white">
+    <div className="lg:px-[59px] px-[10px] mx-auto bg-white">
       {/* Testimonial & FAQ Header */}
       <div className="text-center mb-4">
         <span className=" text-base lg:text-xl uppercase tracking-wide">

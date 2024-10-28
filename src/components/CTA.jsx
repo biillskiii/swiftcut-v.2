@@ -2,10 +2,10 @@ import React from "react";
 import { Bookmark2 } from "iconsax-react";
 const CTA = () => {
   const handleDashboard = () => {
-    window.location.href = "https://dashboard-topaz-kappa.vercel.app/";
+    window.location.href = "https://app.rakyfactory.com/";
   };
   return (
-    <div className="text-center flex flex-col items-center space-y-[35px] lg:px-[59px] px-[30px]">
+    <div className="text-center flex flex-col items-center space-y-[35px] lg:px-[59px] px-[10px]">
       <div>
         <Bookmark2 size={90} color="#7a5ae1" />
       </div>
