@@ -3,14 +3,23 @@
 @tailwind utilities;
 /* Menyembunyikan konten di layar lebih besar dari 700px */
 @media (min-width: 700px) {
-    .hide-on-large {
-        display: none;
-    }
+  .hide-on-large {
+    display: none;
+  }
 }
 
 /* Menampilkan pesan di layar lebih besar dari 700px */
 @media (max-width: 700px) {
-    .desktop-message {
-        display: none;
-    }
+  .desktop-message {
+    display: none;
+  }
+}
+.slick-prev,
+.slick-next {
+  display: none !important; /* Sembunyikan default arrow */
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none; /* Hapus default icon */
 }

@@ -1,17 +1,46 @@
 import React, { useState, useCallback } from "react";
 import { ArrowRight2, ArrowLeft2 } from "iconsax-react";
-import lowVideo from "../assets/video/LOW - STOCKWISE.mp4";
-import midGraciaVideo from "../assets/video/MID - GRACIA.mp4";
-import midRaymondVideo from "../assets/video/MID - RAYMOND.mp4";
-import highVideo from "../assets/video/HIGH - STOCKWISE.mp4";
-
-const videos = [
-  { src: lowVideo, label: "LOW" },
-  { src: midGraciaVideo, label: "MID" },
-  { src: midRaymondVideo, label: "MID" },
-  { src: highVideo, label: "HIGH" },
+import Trello from "../assets/platform1.png";
+import Chat from "../assets/chat.png";
+import Nota from "../assets/nota.png";
+const cardData = [
+  {
+    id: 1,
+    title: "01 Top Up Token dan Buat Permintaan",
+    img: Trello,
+    description:
+      "Top up token dan buat permintaan editing di platform kami. Project manager akan mengelola 3 editor yang siap bekerja untuk Anda.",
+  },
+  {
+    id: 1,
+    img: Chat,
+    title: "02 Proses Editing dan Terima Hasil",
+    description:
+      "Editor mengerjakan permintaan Anda satu per satu dan mengirim hasil via WhatsApp grup dalam 1x24 jam. Feedback bisa diberikan kapan saja.",
+  },
+  {
+    id: 1,
+    img: Nota,
+    title: "03. Pantau Kredit dan Backup File",
+    description:
+      "Setiap video dikreditkan sesuai kesulitan. Anda bisa memantau penggunaan kredit secara transparan, dan file final disimpan di Google Drive.",
+  },
 ];
-
+const CardCaraKerja = ({ img, title, description }) => {
+  return (
+    <div className="p-4 w-[650px] h-full border-2 border-black rounded-2xl">
+      <img
+        width={580}
+        height={281.13}
+        src={img}
+        alt="trello"
+        className="mb-5"
+      />
+      <h1 className="font-bold text-[17px] lg:text-[26px] mb-3">{title}</h1>
+      <p className="font-medium text-sm lg:text-xl">{description}</p>
+    </div>
+  );
+};
 const Porto = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,68 +59,28 @@ const Porto = () => {
   return (
     <div className="font-sans lg:px-[59px] px-[10px] mx-auto p-6 bg-white">
       <div className="mb-4 text-center">
-        <span className="font-semibold text-base lg:text-xl">PORTFOLIO</span>
-        <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal ">
-          Telah dipercaya <span className="text-primary">Creator</span> <br />
-          dan <span className="text-primary">Bisnis</span> Ternama
+        <span className="font-semibold text-base lg:text-xl uppercase text-primary">
+          flexible-subscription
+        </span>
+        <h1 className="text-2xl lg:text-5xl mb-[20px] font-bold mt-[19px] lg:leading-normal ">
+          Cara Kerja Layanan Edit Video dengan Sistem Credit-Based
+        </h1>
+        <h1 className="text-sm lg:text-3xl mb-[48px] font-medium lg:leading-normal ">
+          Nikmati layanan Swiftcut fleksibel, bebas ribet, dan hasil cepat dalam
+          3 langkah mudah.
         </h1>
       </div>
+      {/* Container for videos in a carousel row */}
 
-      <div className="relative overflow-hidden">
-        {/* Container for videos in a carousel row */}
-        <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-          }}
-        >
-          {videos.map((video, index) => (
-            <div key={index} className="min-w-full space-x-5 relative">
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-                onCanPlay={(e) => e.target.play()} // Memastikan video diputar ketika siap
-              >
-                <source src={video.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              {/* Label */}
-              <div className="absolute top-3 right-5 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
-                {video.label}
-              </div>
-            </div>
-          ))}
+      {cardData.map((items, index) => (
+        <div key={index} className="flex flex-wrap mb-5">
+          <CardCaraKerja
+            title={items.title}
+            img={items.img}
+            description={items.description}
+          />
         </div>
-
-        <button
-          onClick={goToPrevious}
-          className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/50 rounded-full p-1 hover:bg-white/75 transition-colors"
-        >
-          <ArrowLeft2 size={24} />
-        </button>
-        <button
-          onClick={goToNext}
-          className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/50 rounded-full p-1 hover:bg-white/75 transition-colors"
-        >
-          <ArrowRight2 size={24} />
-        </button>
-      </div>
-
-      {/* Slide dots */}
-      <div className="flex justify-center space-x-2 mt-4">
-        {videos.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
-              index === currentIndex ? "bg-gray-800" : "bg-gray-300"
-            }`}
-          ></div>
-        ))}
-      </div>
+      ))}
     </div>
   );
 };

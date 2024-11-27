@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Instagram } from "iconsax-react";
 import { FaCircleCheck } from "react-icons/fa6";
+
 import { ArrowDown2, ArrowUp2 } from "iconsax-react";
-import Review from "../assets/review.png"
+import Review from "../assets/review.png";
 const Testi = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -14,18 +15,22 @@ const Testi = () => {
     <div className="lg:px-[59px] px-[10px] mx-auto bg-white">
       {/* Testimonial & FAQ Header */}
       <div className="text-center mb-4">
-        <span className=" text-base lg:text-xl uppercase tracking-wide">
-          TESTIMONIAL & FAQ
-        </span>
-        <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal">
-          Jaminan Hasil yang Selalu <br />
-          Konsisten & <span className="text-primary">Tepat Waktu</span>
+        <h1 className="text-xl lg:text-5xl mb-[20px] font-bold mt-[19px] lg:leading-normal">
+          Pertanyaan Umum & Pengalaman Creator Ternama dengan Swiftcut
         </h1>
       </div>
 
       {/* Testimonial Section */}
-      <div>
-        <img src={Review} alt="" />
+      <div className="justify-center items-center text-center">
+        <h1 className="text-sm font-medium">
+          "Editingnya gacor! Seneng banget, selalu cepat dan tepat waktu.
+          Hasilnya pas banget dengan apa yang aku inginkan, dan timnya selalu
+          responsif."
+        </h1>
+        <h1 className="text-sm font-medium flex justify-center mt-5 items-center gap-x-2">
+          Penulis Buku & Content Creator - @alvisyhrn{" "}
+          <FaCircleCheck className="text-blue-500" />
+        </h1>
       </div>
       {/* FAQ Section */}
       <div className="space-y-4 mt-10">
@@ -40,7 +45,7 @@ const Testi = () => {
             <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 0 && (
-            <div className="text-gray-600 mt-2">
+            <div className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
               <p>
                 Layanan kami memudahkan Anda dengan menyediakan free trial untuk
                 memastikan kecocokan sebelum berlangganan. Selama trial, project
@@ -73,7 +78,7 @@ const Testi = () => {
             <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 1 && (
-            <p className="text-gray-600 mt-2">
+            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
               Konsep unlimited ini memungkinkan Anda untuk mengajukan permintaan
               editing sebanyak mungkin selama kredit subscription masih
               tersedia. Setiap permintaan akan mengurangi jumlah kredit yang
@@ -98,7 +103,7 @@ const Testi = () => {
             <span>{activeIndex === 2 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 2 && (
-            <p className="text-gray-600 mt-2">
+            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
               Anda perlu mengajukan free trial dengan memberikan link file
               mentah dan referensi video. Hasil trial akan kami kirimkan dalam 5
               hari kerja melalui WhatsApp yang Anda daftarkan.

@@ -1,65 +1,106 @@
-import React from "react";
-import { Unlimited, People, Flashy, Timer, Card, Box } from "iconsax-react";
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Solusi = () => {
+  // Create a ref to control the slider
+  const sliderRef = useRef(null);
+
+  const settings = {
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // Remove nextArrow and prevArrow from settings
+    arrows: false, // Disable default arrows
+  };
+
+  // Handler for next slide
+  const handleNextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  // Handler for previous slide
+  const handlePrevSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
   return (
-    <div className="font-sans lg:px-[59px] px-[10px] mx-auto p-6 bg-white">
-      <div className="mb-6 text-center">
-        <span className=" font-semibold text-base lg:text-xl">BENEFIT</span>
-        <h1 className="text-2xl lg:text-5xl mb-[43px] font-bold mt-[19px] lg:leading-normal">
-          Solusi Praktis untuk Konten Short-video
+    <div className="font-sans mx-auto bg-[#FAF8FF] py-[89px]">
+      <div className="mb-6 text-center px-4">
+        <span className="font-semibold text-base lg:text-xl uppercase text-primary">
+          Introducing Swiftcut
+        </span>
+        <h1 className="text-xl lg:text-5xl mb-[20px] font-bold mt-[19px] lg:leading-normal">
+          Solusi Praktis untuk Short-form Content berkonsep Token Listrik
         </h1>
-      </div>
-
-      <div className="space-y-4">
-        <BenefitCard
-          icon={<Unlimited size={90} className="text-primary" />}
-          title="Permintaan Video Editing Tak Terbatas"
-          description="Buatlah short-video editing sebanyak mungkin selama kredit langganan tersedia."
-        />
-
-        <BenefitCard
-          icon={<People size={90} className="text-primary" />}
-          title="Editor Pasti Cocok & Project Manager"
-          description="Project manager kami akan mengelola 2-3 editor yang paling sesuai preferensi Anda."
-        />
-
-        <BenefitCard
-          icon={<Flashy size={90} className="text-primary" />}
-          title="Jaminan Hasil Berkualitas Setiap Hari"
-          description="Terima satu konten setiap hari (2 jika perlu), atau coba fitur Speedy untuk hasil <5 jam."
-        />
-        <BenefitCard
-          icon={<Timer size={90} className="text-primary" />}
-          title="Otomatis Jeda-Langganan 60 Hari"
-          description="Hindari kredit terbuang sia-sia jika tidak terpakai. Maksimal jeda 60 hari berturut-turut."
-        />
-        <BenefitCard
-          icon={<Card size={90} className="text-primary" />}
-          title="Biaya Subscribe Flat & Transparan"
-          description="Tanpa biaya tambahan apapun secara mendadak, dan pantau kredit langganan kapan pun."
-        />
-        <BenefitCard
-          icon={<Box size={90} className="text-primary" />}
-          title="Nikmati Free Trial & Benefit Lainnya"
-          description="Coba free trial, dapatkan diskon 10% seumur hidup, dan akses gratis ke program afiliasi."
-        />
-      </div>
-    </div>
-  );
-};
-
-const BenefitCard = ({ icon, title, description }) => {
-  return (
-    <div className=" py-[50px] flex flex-col items-center text-center bg-gray-50 rounded-lg border border-1">
-      <div className="flex-shrink-0  mb-[40px] rounded-full flex items-center justify-center mr-4">
-        {icon}
-      </div>
-      <div className="px-8 lg:px-[54.5px]">
-        <h3 className="font-semibold text-xl lg:text-[26px] mb-1">{title}</h3>
-        <p className="text-gray-600 text-base lg:text-xl leading-subheading">
-          {description}
+        <p className="text-xs lg:text-xl font-medium">
+          Subscription berbasis kredit yang dapat dijeda seperti token listrik,
+          dipercaya oleh creator dan bisnis ternama.
         </p>
+      </div>
+
+      {/* Carousel Video */}
+      <div className="slider-container max-w-[400px] mx-auto">
+        <Slider ref={sliderRef} {...settings}>
+          <div className="px-2">
+            <video
+              src="/video/LOW - STOCKWISE.mp4"
+              muted
+              autoPlay
+              loop
+              className="rounded-lg w-full"
+            />
+          </div>
+          <div className="px-2">
+            <video
+              src="/video/MID - GRACIA.mp4"
+              muted
+              autoPlay
+              loop
+              className="rounded-lg w-full"
+            />
+          </div>
+          <div className="px-2">
+            <video
+              src="/video/MID - RAYMOND.mp4"
+              muted
+              autoPlay
+              loop
+              className="rounded-lg w-full"
+            />
+          </div>
+          <div className="px-2">
+            <video
+              src="/video/HIGH - STOCKWISE.mp4"
+              muted
+              autoPlay
+              loop
+              className="rounded-lg w-full"
+            />
+          </div>
+        </Slider>
+
+        {/* Navigation Arrows */}
+        <div className="flex justify-center gap-x-6 mt-4">
+          <div
+            className="w-10 h-10 border-2 border-black  rounded-full flex items-center justify-center shadow-md cursor-pointer"
+            onClick={handlePrevSlide}
+          >
+            <ArrowLeft2 size="24" className="" />
+          </div>
+          <div
+            className="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center shadow-md cursor-pointer"
+            onClick={handleNextSlide}
+          >
+            <ArrowRight2 size="24" className="" />
+          </div>
+        </div>
       </div>
     </div>
   );
