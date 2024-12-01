@@ -56,10 +56,12 @@ const Price = () => {
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
-
+  const handleCTA = () => {
+    window.location.href = "https://wa.me/6285175306644?text=I'm%20interested%20in%20your%20company"
+  }
   return (
     <div className="lg:px-[59px] px-[10px] space-y-[50px]">
-      <div className="mb-4 text-center">
+      <div id="price" className="mb-4 text-center">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           PRICING
         </span>
@@ -81,7 +83,7 @@ const Price = () => {
           />
         ))}
       </div>
-      <div className="space-y-5">
+      <div className="space-y-3 ">
         <div
           className="border-2 border-black rounded-lg p-4 cursor-pointer"
           onClick={() => toggleFAQ(0)}
@@ -145,6 +147,14 @@ const Price = () => {
             </div>
           )}
         </div>
+      </div>
+      <div className="flex justify-center">
+        <button
+          onClick={handleCTA}
+          className="bg-primary w-9/12 font-extrabold text-white py-4 px-6 rounded-lg mb-4"
+        >
+          Get Your Free Video Trial
+        </button>
       </div>
     </div>
   );

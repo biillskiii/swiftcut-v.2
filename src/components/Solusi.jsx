@@ -46,7 +46,7 @@ const Solusi = () => {
       </div>
 
       {/* Carousel Video */}
-      <div className="slider-container max-w-[400px] mx-auto">
+      <div className="slider-container max-w-[300px] mx-auto">
         <Slider ref={sliderRef} {...settings}>
           <div className="px-2">
             <video

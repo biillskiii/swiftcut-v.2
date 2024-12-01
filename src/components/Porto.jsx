@@ -6,7 +6,7 @@ import Nota from "../assets/nota.png";
 const cardData = [
   {
     id: 1,
-    title: "01 Top Up Token dan Buat Permintaan",
+    title: "01. Top Up Token dan Buat Permintaan",
     img: Trello,
     description:
       "Top up token dan buat permintaan editing di platform kami. Project manager akan mengelola 3 editor yang siap bekerja untuk Anda.",
@@ -14,7 +14,7 @@ const cardData = [
   {
     id: 1,
     img: Chat,
-    title: "02 Proses Editing dan Terima Hasil",
+    title: "02. Proses Editing dan Terima Hasil",
     description:
       "Editor mengerjakan permintaan Anda satu per satu dan mengirim hasil via WhatsApp grup dalam 1x24 jam. Feedback bisa diberikan kapan saja.",
   },
@@ -28,7 +28,7 @@ const cardData = [
 ];
 const CardCaraKerja = ({ img, title, description }) => {
   return (
-    <div className="p-4 w-[650px] h-full border-2 border-black rounded-2xl">
+    <div className="p-4 w-[320px] h-full border-2 border-black rounded-2xl">
       <img
         width={580}
         height={281.13}
@@ -37,7 +37,7 @@ const CardCaraKerja = ({ img, title, description }) => {
         className="mb-5"
       />
       <h1 className="font-bold text-[17px] lg:text-[26px] mb-3">{title}</h1>
-      <p className="font-medium text-sm lg:text-xl">{description}</p>
+      <p className="font-medium text-sm lg:text-xl text-justify-">{description}</p>
     </div>
   );
 };
@@ -73,7 +73,7 @@ const Porto = () => {
       {/* Container for videos in a carousel row */}
 
       {cardData.map((items, index) => (
-        <div key={index} className="flex flex-wrap mb-5">
+        <div key={index} className="flex justify-center flex-wrap mb-5">
           <CardCaraKerja
             title={items.title}
             img={items.img}
