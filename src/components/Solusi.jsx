@@ -59,7 +59,7 @@ const Solusi = () => {
           </div>
           <div className="px-2">
             <video
-              src="/video/HIGH - STOCKWISE.mp4"
+              src="/src/assets/video/HIGH - STOCKWISE.mp4"
               muted
               autoPlay
               loop
@@ -68,7 +68,7 @@ const Solusi = () => {
           </div>
           <div className="px-2">
             <video
-              src="/video/MID - GRACIA.mp4"
+              src="/src/assets/video/MID - GRACIA.mp4"
               muted
               autoPlay
               loop
@@ -77,7 +77,7 @@ const Solusi = () => {
           </div>
           <div className="px-2">
             <video
-              src="/video/LOW - Alvi Syahrin_2.mp4"
+              src="/src/assets/video/LOW - Alvi Syahrin_2.mp4"
               muted
               autoPlay
               loop
@@ -86,7 +86,7 @@ const Solusi = () => {
           </div>
           <div className="px-2">
             <video
-              src="/video/LOW - STOCKWISE.mp4"
+              src="/src/assets/video/LOW - STOCKWISE.mp4"
               muted
               autoPlay
               loop
@@ -95,7 +95,7 @@ const Solusi = () => {
           </div>
           <div className="px-2">
             <video
-              src="/video/MID - Cici Otomotif_2.mp4"
+              src="/src/assets/video/MID - Cici Otomotif_2.mp4"
               muted
               autoPlay
               loop
