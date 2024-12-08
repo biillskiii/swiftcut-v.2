@@ -7,7 +7,7 @@ const CTA = () => {
       priceSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   return (
     <div className="text-center flex flex-col items-center space-y-[20px] lg:px-[59px] px-[10px]">
       <div>
@@ -18,8 +18,8 @@ const CTA = () => {
         Preferensi, Kami <span className="text-primary">Siap Layani!</span>
       </h1>
       <p className="text-sm lg:text-xl">
-        Anda akan mendapatkan 3 editor berpengalaman yang disesuaikan dengan
-        preferensi anda.
+        Berbagai tingkat kompleksitas dan revisi hingga puas tanpa biaya
+        tambahan mendadak
       </p>
       <div className="w-9/12">
         <button

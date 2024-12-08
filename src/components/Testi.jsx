@@ -40,28 +40,22 @@ const Testi = () => {
         >
           <div className="flex justify-between items-center">
             <p className="font-semibold text-xs lg:text-xl">
-              Bagaimana Layanan Ini Membantu Saya?
+              Apa bedanya dengan hire freelancer/in house?
             </p>
             <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 0 && (
             <div className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
               <p>
-                Layanan kami memudahkan Anda dengan menyediakan free trial untuk
-                memastikan kecocokan sebelum berlangganan. Selama trial, project
-                manager kami akan memilih 2-3 editor yang paling sesuai dengan
-                kebutuhan Anda.
+                Swiftcut menawarkan solusi yang lebih fleksibel, hemat biaya,
+                dan bebas repot dibandingkan merekrut freelancer atau editor
+                in-house.
               </p>
               <p className="mt-4">
-                Setelah Anda subscribe, Anda akan bergabung ke Trello untuk
-                mengelola permintaan editing dan ke grup WhatsApp untuk
-                komunikasi langsung dengan tim editor kami.
-              </p>
-              <p className="mt-4">
-                Kami mengurus semua administrasi dan penugasan editor, serta
-                menyediakan editing guideline untuk menjaga kualitas konsisten
-                dari setiap editor. Anda hanya perlu fokus pada membuat request
-                di platform kami sesuai prioritas Anda.
+                Dengan Swiftcut, Anda mendapatkan akses ke tim berpengalaman
+                yang terdiri dari 3 editor dan 1 project manager yang siap 24/7,
+                tanpa perlu melalui proses perekrutan dan pengelolaan yang
+                rumit.
               </p>
             </div>
           )}
@@ -73,20 +67,19 @@ const Testi = () => {
         >
           <div className="flex justify-between items-center">
             <p className="font-semibold text-xs lg:text-xl">
-              Bagaimana Cara Kerja Kredit Subscription?
+              Bagaimana cara kerja jeda langganan?
             </p>
             <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 1 && (
             <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
-              Konsep unlimited ini memungkinkan Anda untuk mengajukan permintaan
-              editing sebanyak mungkin selama kredit subscription masih
-              tersedia. Setiap permintaan akan mengurangi jumlah kredit yang
-              Anda miliki.
+              Fitur jeda langganan Swiftcut memungkinkan Anda untuk menghentikan
+              sementara layanan tanpa kehilangan kredit yang tersisa.
               <p className="mt-4">
-                Misalnya, jika Anda membeli paket 360 jam dan satu video
-                menggunakan 20 jam kredit, Anda masih bisa membuat permintaan
-                hingga sisa 340 jam kredit Anda habis.
+                Saat Anda menjeda langganan, sisa token atau kredit poin tetap
+                aman dan dapat digunakan kembali saat langganan diaktifkan
+                kembali. Anda dapat menjeda langganan hingga total maksimal 60
+                hari.
               </p>
             </p>
           )}
@@ -98,21 +91,86 @@ const Testi = () => {
         >
           <div className="flex justify-between items-center">
             <p className="font-semibold text-xs lg:text-xl">
-              Bagaimana Cara Subscribe Layanan Ini?
+              Berapa video saya dapatkan per bulan?
             </p>
             <span>{activeIndex === 2 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 2 && (
             <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
-              Anda perlu mengajukan free trial dengan memberikan link file
-              mentah dan referensi video. Hasil trial akan kami kirimkan dalam 5
-              hari kerja melalui WhatsApp yang Anda daftarkan.
+              Jumlah video yang Anda dapatkan per bulan di Swiftcut tergantung
+              pada jumlah token atau kredit poin yang Anda miliki dan
+              kompleksitas video yang diedit. Misalnya, satu video pendek dengan
+              edit sederhana mungkin membutuhkan 20 poin, sementara video dengan
+              tambahan visual efek yang lebih kompleks bisa memerlukan 38 poin.
               <p className="mt-4">
-                Setelah itu, kami akan membantu Anda memilih paket langganan
-                yang sesuai, kemudian Anda melakukan pembayaran penuh di awal.
-                Tim kami akan mempersiapkan onboarding, dan setelah itu, Anda
-                bisa mulai menikmati layanan kami.
+                Jika Anda membeli paket dengan total 300 poin per bulan, Anda
+                dapat membuat sekitar 15 video sederhana atau 7-8 video dengan
+                edit lebih kompleks. Kompleksitas ini ditentukan berdasarkan
+                referensi yang Anda berikan.
               </p>
+            </p>
+          )}
+        </div>
+        <div
+          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          onClick={() => toggleFAQ(3)}
+        >
+          <div className="flex justify-between items-center">
+            <p className="font-semibold text-xs lg:text-xl">
+              Berapa kali saya bisa revisi video saya?
+            </p>
+            <span>{activeIndex === 3 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
+          </div>
+          {activeIndex === 3 && (
+            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+              Di Swiftcut, Anda dapat melakukan revisi video sebanyak yang Anda
+              butuhkan selama kredit atau token Anda masih tersedia.
+              <p className="mt-4">
+                Dengan model ini, Anda tidak dibatasi oleh jumlah revisi,
+                memastikan Anda mendapatkan hasil yang sesuai dengan keinginan
+                Anda.
+              </p>
+            </p>
+          )}
+        </div>
+        <div
+          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          onClick={() => toggleFAQ(4)}
+        >
+          <div className="flex justify-between items-center">
+            <p className="font-semibold text-xs lg:text-xl">
+              Berapa lama proses editing video saya?
+            </p>
+            <span>{activeIndex === 4 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
+          </div>
+          {activeIndex === 4 && (
+            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+              Proses editing video di Swiftcut dijamin selesai dalam waktu 24
+              jam atau kurang, dengan pengiriman preview pertama.
+              <p className="mt-4">
+                Untuk kebutuhan yang lebih mendesak, kami menyediakan dua opsi
+                fitur Speedy: Speedy REG, yang menjamin pengiriman preview dalam
+                waktu 13 jam atau kurang, dan Speedy MAX, yang menjamin
+                pengiriman preview dalam waktu 5 jam atau kurang.
+              </p>
+            </p>
+          )}
+        </div>
+        <div
+          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          onClick={() => toggleFAQ(5)}
+        >
+          <div className="flex justify-between items-center">
+            <p className="font-semibold text-xs lg:text-xl">
+              Saya ingin tanya-tanya lebih lanjut
+            </p>
+            <span>{activeIndex === 5 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
+          </div>
+          {activeIndex === 5 && (
+            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+              Jika Anda ingin tanya-tanya lebih lanjut, kami menyediakan sesi
+              konsultasi gratis. Selain itu, Anda juga bisa mengklaim free trial
+              untuk mencoba layanan kami sebelum memutuskan berlangganan.
             </p>
           )}
         </div>

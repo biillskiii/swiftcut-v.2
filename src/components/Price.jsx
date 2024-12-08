@@ -57,10 +57,11 @@ const Price = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
   const handleCTA = () => {
-    window.location.href = "https://wa.me/6285175306644?text=I'm%20interested%20in%20your%20company"
-  }
+    window.location.href =
+      "https://wa.me/6285175306644?text=I'm%20interested%20in%20your%20company";
+  };
   return (
-    <div className="lg:px-[59px] px-[10px] space-y-[50px]">
+    <div className="lg:px-[59px] px-[10px] space-y-[20px]">
       <div id="price" className="mb-4 text-center">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           PRICING
@@ -69,8 +70,8 @@ const Price = () => {
           Top up token dan dapatkan Credit Points sesuai pilihan yang tersedia
         </h2>
         <h2 className="text-sm lg:text-3xl mb-[48px] font-medium lg:leading-normal">
-          Semua token mencakup akses 3-editor yang pasti cocok, tersedia 24/7,
-          jeda-langganan, dan akses ke platform kami.
+          Semua harga mencakup akses 3-editor yang pasti cocok, siap kirim hasil
+          tiap hari, jeda-langganan dan akses ke platform kami.
         </h2>
       </div>
       <div className="grid sm:grid-cols-1 grid-cols-2 gap-5">
@@ -151,9 +152,9 @@ const Price = () => {
       <div className="flex justify-center">
         <button
           onClick={handleCTA}
-          className="bg-primary w-9/12 font-extrabold text-white py-4 px-6 rounded-lg mb-4"
+          className="bg-primary w-9/12 uppercase font-extrabold text-white py-4 px-6 rounded-lg mb-4"
         >
-          Get Your Free Video Trial
+          Try free trial
         </button>
       </div>
     </div>
