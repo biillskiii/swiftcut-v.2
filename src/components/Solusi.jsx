@@ -50,7 +50,7 @@ const Solusi = () => {
         <Slider ref={sliderRef} {...settings}>
           <div className="px-2">
             <video
-              src="/video/MID - RAYMOND.mp4"
+              src="/src/assets/video/MID - RAYMOND.mp4"
               muted
               autoPlay
               loop
