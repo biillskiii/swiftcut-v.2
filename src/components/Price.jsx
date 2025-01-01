@@ -97,7 +97,7 @@ const Price = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-7xl px-32 py-12">
+    <div className="container mx-auto max-w-7xl p-6 lg:px-32 py-12">
       <div id="pricing" className="flex flex-col items-center text-center mb-12">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           PRICING

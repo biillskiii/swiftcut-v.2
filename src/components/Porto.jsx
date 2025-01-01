@@ -57,7 +57,7 @@ const Porto = () => {
   }, []);
 
   return (
-    <div className="container px-32 font-sans lg:px-[59px] mx-auto p-6 bg-white">
+    <div className="container  font-sans lg:px-[59px] mx-auto p-6 bg-white">
       <div id="how-it-works" className="mb-4 flex flex-col items-center text-center">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           flexible-subscription
