@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Instagram } from "iconsax-react";
 import { FaCircleCheck } from "react-icons/fa6";
-
 import { ArrowDown2, ArrowUp2 } from "iconsax-react";
 import Review from "../assets/review.png";
+
 const Testi = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -12,30 +12,31 @@ const Testi = () => {
   };
 
   return (
-    <div className="lg:px-[59px] px-[10px] mx-auto bg-white">
+    <div className="lg:px-[120px] px-[10px] mx-auto bg-white">
       {/* Testimonial & FAQ Header */}
-      <div className="text-center mb-4">
-        <h1 className="text-xl lg:text-5xl mb-[20px] font-bold mt-[19px] lg:leading-normal">
+      <div id="faq" className="text-center flex justify-center mb-8">
+        <h1 className="text-xl lg:text-[40px] lg:w-7/12 mb-[20px] font-bold mt-[19px] lg:leading-relaxed">
           Pertanyaan Umum & Pengalaman Creator Ternama dengan Swiftcut
         </h1>
       </div>
 
       {/* Testimonial Section */}
-      <div className="justify-center items-center text-center">
-        <h1 className="text-sm font-medium">
+      <div className="justify-center items-center text-center max-w-3xl mx-auto">
+        <h1 className="text-sm lg:text-lg font-medium">
           "Editingnya gacor! Seneng banget, selalu cepat dan tepat waktu.
           Hasilnya pas banget dengan apa yang aku inginkan, dan timnya selalu
           responsif."
         </h1>
-        <h1 className="text-sm font-medium flex justify-center mt-5 items-center gap-x-2">
+        <h1 className="text-sm lg:text-lg font-medium flex justify-center mt-5 items-center gap-x-2">
           Penulis Buku & Content Creator - @alvisyhrn{" "}
           <FaCircleCheck className="text-blue-500" />
         </h1>
       </div>
+
       {/* FAQ Section */}
-      <div className="space-y-4 mt-10">
+      <div className="space-y-4 mt-10 max-w-[1030px] mx-auto">
         <div
-          className="border-2 border-black rounded-lg p-4 cursor-pointer"
+          className="border-2 border-black rounded-lg p-6 cursor-pointer"
           onClick={() => toggleFAQ(0)}
         >
           <div className="flex justify-between items-center">
@@ -45,7 +46,7 @@ const Testi = () => {
             <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 0 && (
-            <div className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+            <div className="text-sm lg:text-lg text-gray-500 mt-4 font-medium lg:leading-relaxed">
               <p>
                 Swiftcut menawarkan solusi yang lebih fleksibel, hemat biaya,
                 dan bebas repot dibandingkan merekrut freelancer atau editor
@@ -62,7 +63,7 @@ const Testi = () => {
         </div>
 
         <div
-          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          className="border-2 border-black rounded-lg p-6 cursor-pointer"
           onClick={() => toggleFAQ(1)}
         >
           <div className="flex justify-between items-center">
@@ -72,7 +73,7 @@ const Testi = () => {
             <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 1 && (
-            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+            <p className="text-sm lg:text-lg text-gray-500 mt-4 font-medium lg:leading-relaxed">
               Fitur jeda langganan Swiftcut memungkinkan Anda untuk menghentikan
               sementara layanan tanpa kehilangan kredit yang tersisa.
               <p className="mt-4">
@@ -86,7 +87,7 @@ const Testi = () => {
         </div>
 
         <div
-          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          className="border-2 border-black rounded-lg p-6 cursor-pointer"
           onClick={() => toggleFAQ(2)}
         >
           <div className="flex justify-between items-center">
@@ -96,7 +97,7 @@ const Testi = () => {
             <span>{activeIndex === 2 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 2 && (
-            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+            <p className="text-sm lg:text-lg text-gray-500 mt-4 font-medium lg:leading-relaxed">
               Jumlah video yang Anda dapatkan per bulan di Swiftcut tergantung
               pada jumlah token atau kredit poin yang Anda miliki dan
               kompleksitas video yang diedit. Misalnya, satu video pendek dengan
@@ -111,8 +112,9 @@ const Testi = () => {
             </p>
           )}
         </div>
+
         <div
-          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          className="border-2 border-black rounded-lg p-6 cursor-pointer"
           onClick={() => toggleFAQ(3)}
         >
           <div className="flex justify-between items-center">
@@ -122,7 +124,7 @@ const Testi = () => {
             <span>{activeIndex === 3 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 3 && (
-            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+            <p className="text-sm lg:text-lg text-gray-500 mt-4 font-medium lg:leading-relaxed">
               Di Swiftcut, Anda dapat melakukan revisi video sebanyak yang Anda
               butuhkan selama kredit atau token Anda masih tersedia.
               <p className="mt-4">
@@ -133,8 +135,9 @@ const Testi = () => {
             </p>
           )}
         </div>
+
         <div
-          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          className="border-2 border-black rounded-lg p-6 cursor-pointer"
           onClick={() => toggleFAQ(4)}
         >
           <div className="flex justify-between items-center">
@@ -144,7 +147,7 @@ const Testi = () => {
             <span>{activeIndex === 4 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 4 && (
-            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+            <p className="text-sm lg:text-lg text-gray-500 mt-4 font-medium lg:leading-relaxed">
               Proses editing video di Swiftcut dijamin selesai dalam waktu 24
               jam atau kurang, dengan pengiriman preview pertama.
               <p className="mt-4">
@@ -156,8 +159,9 @@ const Testi = () => {
             </p>
           )}
         </div>
+
         <div
-          className="border-2 border-black  rounded-lg p-4 cursor-pointer"
+          className="border-2 border-black rounded-lg p-6 cursor-pointer"
           onClick={() => toggleFAQ(5)}
         >
           <div className="flex justify-between items-center">
@@ -167,7 +171,7 @@ const Testi = () => {
             <span>{activeIndex === 5 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
           </div>
           {activeIndex === 5 && (
-            <p className="text-sm text-gray-500 mt-4 lg:text-3xl mb-[48px] font-medium lg:leading-normal">
+            <p className="text-sm lg:text-lg text-gray-500 mt-4 font-medium lg:leading-relaxed">
               Jika Anda ingin tanya-tanya lebih lanjut, kami menyediakan sesi
               konsultasi gratis. Selain itu, Anda juga bisa mengklaim free trial
               untuk mencoba layanan kami sebelum memutuskan berlangganan.

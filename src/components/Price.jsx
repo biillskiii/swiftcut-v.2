@@ -1,5 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowDown2, ArrowUp2 } from "iconsax-react";
+
+const features = [
+  "Akses 3 editor siap 24/7 tanpa hambatan.",
+  "Manajer khusus untuk kelola proyek dan editor.",
+  "Fokus hanya pada editing short-form content.",
+  "Daya Editing 'Single-Process'.",
+  "Jaminan kirim satu video setiap hari.",
+  "Fitur Speedy, hasil dalam 5 jam.",
+  "Bebas permintaan dan revisi sesuai kebutuhan.",
+  "Akses platform manajemen proyek yang mudah.",
+  "Komunikasi cepat via WhatsApp group.",
+  "Backup video final selama 2 kuartal.",
+  "Jeda langganan hingga 60 hari, fleksibel.",
+  "Transparansi penuh penggunaan kredit.",
+];
+
+const extras = [
+  {
+    title: "Upgrade Daya Editing ke Double-Process",
+    description:
+      "Bayar 10% ekstra setiap top-up token, untuk akses pengerjaan 2 video sekaligus, dan dapatkan bonus 5% credit points.",
+  },
+  {
+    title: "Layanan Konversi YouTube ke Shorts",
+    description:
+      "Bayar 8% dari setiap top-up token, dan kami pilih bagian terbaik untuk dijadikan Shorts siap unggah, tanpa repot dan terima beres.",
+  },
+];
 
 const priceData = [
   {
@@ -42,120 +70,135 @@ const priceData = [
 
 const CardPrice = ({ title, description, price }) => {
   return (
-    <div className="w-[175px] h-full border-2 p-3 bg-[#FAF8FF] border-black rounded-xl">
-      <h1 className="font-bold text-[16px] mb-[5px]">{title}</h1>
-      <p className="font-medium text-xs mb-[35px]">{description}</p>
-      <p className="font-bold text-[20px]">{price}</p>
+    <div className="w-full border-2 p-4 bg-white hover:bg-[#FAF8FF] border-black rounded-xl">
+      <h1 className="font-bold text-base mb-2">{title}</h1>
+      <p className="font-medium text-xs mb-4">{description}</p>
+      <p className="font-bold text-xl">{price}</p>
     </div>
   );
 };
 
 const Price = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
-  const handleCTA = () => {
-    window.location.href =
-      "https://wa.me/6285175306644?text=I'm%20interested%20in%20your%20company";
-  };
+
   return (
-    <div className="lg:px-[59px] px-[10px] space-y-[20px]">
-      <div id="price" className="mb-4 text-center">
+    <div className="container mx-auto max-w-7xl px-32 py-12">
+      <div id="pricing" className="flex flex-col items-center text-center mb-12">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           PRICING
         </span>
-        <h2 className="text-2xl lg:text-5xl mb-[20px] font-bold mt-[19px] lg:leading-normal">
+        <h2 className="text-xl lg:text-4xl font-bold mt-4 mb-4 max-w-3xl">
           Top up token dan dapatkan Credit Points sesuai pilihan yang tersedia
         </h2>
-        <h2 className="text-sm lg:text-3xl mb-[48px] font-medium lg:leading-normal">
-          Semua harga mencakup akses 3-editor yang pasti cocok, siap kirim hasil
-          tiap hari, jeda-langganan dan akses ke platform kami.
+        <h2 className="md:text-xl lg:w-5/12 w-full lg:text-base  mb-1 font-medium max-w-3xl">
+          Semua harga mencakup akses 3-editor yang paling cocok, siap kirim
+          hasil tiap hari, jeda-langganan, dan akses ke platform kami.
         </h2>
       </div>
-      <div className="grid sm:grid-cols-1 grid-cols-2 gap-5">
-        {priceData.map((card, index) => (
-          <CardPrice
-            key={card.id}
-            title={card.title}
-            description={card.description}
-            price={card.price}
-          />
-        ))}
-      </div>
-      <div className="space-y-3 ">
-        <div
-          className="border-2 border-black rounded-lg p-4 cursor-pointer"
-          onClick={() => toggleFAQ(0)}
-        >
-          <div className="flex justify-between items-center">
-            <p className="font-semibold text-xs lg:text-xl">
-              Lihat Semua Fitur & Fasilitas Layanan
-            </p>
-            <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
-          </div>
-          {activeIndex === 0 && (
-            <div className="text-gray-600 mt-2">
-              <ul className="text-xs text-black">
-                <li>&#8226; Akses 3 editor siap 24/7 tanpa hambatan.</li>
-                <li>&#8226; Manajer khusus untuk kelola proyek dan editor.</li>
-                <li>&#8226; Fokus hanya pada editing short-form content.</li>
-                <li>&#8226; Daya Editing "Single-Process".</li>
-                <li>&#8226; Jaminan kirim satu video setiap hari.</li>
-                <li>&#8226; Fitur Speedy, hasil dalam 5 jam.</li>
-                <li>&#8226; Bebas permintaan dan revisi sesuai kebutuhan.</li>
-                <li>&#8226; Akses platform manajemen proyek yang mudah.</li>
-                <li>&#8226; Komunikasi cepat via WhatsApp group.</li>
-                <li>&#8226; Backup video final selama 2 kuartal.</li>
-                <li>&#8226; Jeda langganan hingga 60 hari, fleksibel.</li>
-                <li>&#8226; Transparansi penuh penggunaan kredit.</li>
+
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {priceData.map((card) => (
+            <CardPrice
+              key={card.id}
+              title={card.title}
+              description={card.description}
+              price={card.price}
+            />
+          ))}
+        </div>
+
+        {isDesktop ? (
+          <div className="grid grid-cols-2 gap-4">
+            <div className="border-2 border-black rounded-xl p-6 bg-[#FAF8FF]">
+              <h3 className="font-bold text-lg mb-4">
+                Semua Fitur & Fasilitas Layanan
+              </h3>
+              <ul className="space-y-2">
+                {features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-          )}
-        </div>
-        <div
-          className="border-2 border-black rounded-lg p-4 cursor-pointer"
-          onClick={() => toggleFAQ(1)}
-        >
-          <div className="flex justify-between items-center">
-            <p className="font-semibold text-xs lg:text-xl">
-              Lihat Layanan Ekstra Lainnya
-            </p>
-            <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
-          </div>
-          {activeIndex === 1 && (
-            <div>
-              <div className="mt-2 text-xs text-black border border-b-black pb-5">
-                <h1 className=" font-bold">
-                  Upgrade Daya Editing ke Double-Process
-                </h1>
-                <p className="font-medium">
-                  Bayar 10% ekstra setiap top-up token, untuk akses pengerjaan 2
-                  video sekaligus, dan dapatkan bonus 5% credit points.
-                </p>
-              </div>
-              <div className=" text-xs text-black pt-5">
-                <h1 className=" font-bold">
-                  Layanan Konversi YouTube ke Shorts
-                </h1>
-                <p className="font-medium">
-                  Bayar 8% dari setiap top-up token, dan kami pilih bagian
-                  terbaik untuk dijadikan Shorts siap unggah, tanpa repot dan
-                  terima beres.
-                </p>
+
+            <div className="border-2 border-black rounded-xl p-6 bg-[#FAF8FF]">
+              <h3 className="font-bold text-lg mb-4">Layanan Ekstra Lainnya</h3>
+              <div className="space-y-4">
+                {extras.map((extra, index) => (
+                  <div key={index}>
+                    <h4 className="font-bold text-base mb-2">{extra.title}</h4>
+                    <p className="text-sm">{extra.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          )}
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <button
-          onClick={handleCTA}
-          className="bg-primary w-9/12 uppercase font-extrabold text-white py-4 px-6 rounded-lg mb-4"
-        >
-          Try free trial
-        </button>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <div className="border-2 border-black rounded-xl">
+              <div
+                className="p-4 flex justify-between items-center cursor-pointer"
+                onClick={() => toggleFAQ(0)}
+              >
+                <p className="font-semibold text-sm">
+                  Lihat Semua Fitur & Fasilitas Layanan
+                </p>
+                <span>{activeIndex === 0 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
+              </div>
+              {activeIndex === 0 && (
+                <div className="p-4 border-t-2 border-black">
+                  <ul className="space-y-2">
+                    {features.map((feature, index) => (
+                      <li key={index} className="text-sm">
+                        • {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <div className="border-2 border-black rounded-xl">
+              <div
+                className="p-4 flex justify-between items-center cursor-pointer"
+                onClick={() => toggleFAQ(1)}
+              >
+                <p className="font-semibold text-sm">
+                  Lihat Layanan Ekstra Lainnya
+                </p>
+                <span>{activeIndex === 1 ? <ArrowUp2 /> : <ArrowDown2 />}</span>
+              </div>
+              {activeIndex === 1 && (
+                <div className="p-4 border-t-2 border-black">
+                  {extras.map((extra, index) => (
+                    <div key={index} className="mb-4 last:mb-0">
+                      <h4 className="font-bold text-sm mb-2">{extra.title}</h4>
+                      <p className="text-sm">{extra.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

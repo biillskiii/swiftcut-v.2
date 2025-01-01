@@ -36,8 +36,8 @@ const CardCaraKerja = ({ img, title, description }) => {
         alt="trello"
         className="mb-5"
       />
-      <h1 className="font-bold text-[17px] lg:text-[26px] mb-3">{title}</h1>
-      <p className="font-medium text-sm lg:text-xl text-justify-">{description}</p>
+      <h1 className="font-bold lg:text-[17px] text-[26px] mb-3">{title}</h1>
+      <p className="font-medium lg:text-sm text-xl text-justify-">{description}</p>
     </div>
   );
 };
@@ -57,30 +57,32 @@ const Porto = () => {
   }, []);
 
   return (
-    <div className="font-sans lg:px-[59px] px-[10px] mx-auto p-6 bg-white">
-      <div className="mb-4 text-center">
+    <div className="container px-32 font-sans lg:px-[59px] mx-auto p-6 bg-white">
+      <div id="how-it-works" className="mb-4 flex flex-col items-center text-center">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           flexible-subscription
         </span>
-        <h1 className="text-2xl lg:text-5xl mb-[20px] font-bold mt-[19px] lg:leading-normal ">
+        <h1 className="text-xl lg:text-5xl lg:w-7/12 mb-[20px] font-bold mt-[19px] lg:leading-normal ">
           Cara Kerja Layanan Edit Video dengan Sistem Credit-Based
         </h1>
-        <h1 className="text-sm lg:text-3xl mb-[48px] font-medium lg:leading-normal ">
+        <h1 className="md:text-xl lg:w-4/12 w-full lg:text-base mb-[18px] font-medium ">
           Nikmati layanan Swiftcut fleksibel, bebas ribet, dan hasil cepat dalam
           3 langkah mudah.
         </h1>
       </div>
       {/* Container for videos in a carousel row */}
 
-      {cardData.map((items, index) => (
-        <div key={index} className="flex justify-center flex-wrap mb-5">
-          <CardCaraKerja
-            title={items.title}
-            img={items.img}
-            description={items.description}
-          />
-        </div>
-      ))}
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-y-7 lg:gap-2">
+        {cardData.map((items, index) => (
+          <div key={index} className="">
+            <CardCaraKerja
+              title={items.title}
+              img={items.img}
+              description={items.description}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
