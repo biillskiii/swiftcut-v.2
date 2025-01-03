@@ -3,7 +3,7 @@ import Hero from "../assets/hero.png";
 
 function App() {
   const handleScrollToPrice = () => {
-    const priceSection = document.getElementById("price");
+    const priceSection = document.getElementById("pricing");
     if (priceSection) {
       priceSection.scrollIntoView({ behavior: "smooth" });
     }

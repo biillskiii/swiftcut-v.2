@@ -3,7 +3,7 @@ import { Bookmark2 } from "iconsax-react";
 
 const CTA = () => {
   const handleScrollToPrice = () => {
-    const priceSection = document.getElementById("price");
+    const priceSection = document.getElementById("pricing");
     if (priceSection) {
       priceSection.scrollIntoView({ behavior: "smooth" });
     }

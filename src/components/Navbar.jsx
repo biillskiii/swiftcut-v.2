@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Free Trial Button */}
       <button
-        onClick={() => handleScroll("price")}
+        onClick={() => handleScroll("pricing")}
         className="bg-primary flex items-center gap-x-2 text-white px-5 py-3 lg:py-3 rounded-lg font-bold text-[9px] lg:text-sm focus:outline-none sm:px-3 sm:text-xs sm:py-2"
       >
         Get Free Trial
