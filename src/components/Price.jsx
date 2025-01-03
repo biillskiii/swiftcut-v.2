@@ -81,7 +81,10 @@ const CardPrice = ({ title, description, price }) => {
 const Price = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isDesktop, setIsDesktop] = useState(false);
-
+  const handleCTA = () => {
+    window.location.href =
+      "https://wa.me/6285175306644?text=I'm%20interested%20in%20your%20company";
+  };
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
@@ -98,7 +101,10 @@ const Price = () => {
 
   return (
     <div className="container mx-auto max-w-7xl p-6 lg:px-32 py-12">
-      <div id="pricing" className="flex flex-col items-center text-center mb-12">
+      <div
+        id="pricing"
+        className="flex flex-col items-center text-center mb-12"
+      >
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">
           PRICING
         </span>
@@ -199,6 +205,14 @@ const Price = () => {
             </div>
           </div>
         )}
+      </div>
+      <div className="flex mt-10 justify-center">
+        <button
+          onClick={handleCTA}
+          className="bg-primary w-9/12 font-extrabold text-white py-4 px-6 uppercase rounded-lg mb-4"
+        >
+          Try Free Trial
+        </button>
       </div>
     </div>
   );

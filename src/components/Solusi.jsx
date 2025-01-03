@@ -38,7 +38,7 @@ const Solusi = () => {
   };
 
   return (
-    <div className="container px-[10px] font-sans bg-[#FAF8FF] min-h-screen py-[89px] flex flex-col justify-center items-center">
+    <div className=" w-full font-sans bg-[#FAF8FF] min-h-screen py-[89px] flex flex-col justify-center items-center">
       {/* Header Section */}
       <div id="portfolio" className="text-center px-4 mb-6">
         <span className="font-semibold text-base lg:text-xl uppercase text-primary">

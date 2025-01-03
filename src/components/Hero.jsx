@@ -10,7 +10,7 @@ function App() {
   };
 
   return (
-    <div className="container  bg-white lg:px-[59px] px-[10px] text-center">
+    <div className="  bg-white text-center">
       {/* Desktop View */}
       <div className="hidden lg:flex lg:flex-col lg:justify-between lg:items-center lg:mt-[86px]">
         {/* Text Section */}
@@ -27,7 +27,7 @@ function App() {
         </div>
 
         {/* Video Section */}
-        <div className="lg:w-8/12 lg:pl-10 mt-10">
+        <div className="lg:w-7/12 mt-10">
           <div className="rounded-lg overflow-hidden shadow-lg">
             <iframe
               className="w-full aspect-video"
